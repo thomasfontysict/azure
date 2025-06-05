@@ -25,7 +25,7 @@ done
 echo "[INFO] Systeem bijwerken en vereisten installeren..."
 apt-get update
 apt-get install -y software-properties-common
-add-apt-repository universe
+add-apt-repository -y universe || echo "[WAARSCHUWING] Universe repo toevoegen faalde, mogelijk al actief."
 apt-get update
 apt-get upgrade -y
 
